@@ -24,7 +24,7 @@ import tempfile
 
 def main():
     st.set_page_config(page_title="에너지", page_icon="🌻")
-    st.image('energy.pngg')
+    st.image('energy.png')
     st.title("_:red[에너지 학습 도움이]_ 🏫")
     st.header("😶주의! 이 쳇봇은 참고용으로 사용하세요!", divider='rainbow')
     
@@ -46,7 +46,7 @@ def main():
     with st.sidebar:
         folder_path = Path()
         openai_api_key = st.secrets["OPENAI_API_KEY"]
-        model_name = 'gpt-4o'
+        model_name = 'gpt-4o-mini'
         
         st.text("아래의 'Process'를 누르고\n아래 채팅창이 활성화 될 때까지\n잠시 기다리세요!😊😊😊")
         process = st.button("Process", key="process_button")
