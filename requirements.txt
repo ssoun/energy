@@ -10,4 +10,6 @@ pypdf
 loguru
 docx2txt
 langchain-community
+SpeechRecognition
 langchain_huggingface
+google-cloud-speech
