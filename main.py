@@ -24,9 +24,9 @@ import tempfile
 
 def main():
     st.set_page_config(page_title="에너지", page_icon="🌻")
-    st.image('knowhow.png')
+    st.image('energy.pngg')
     st.title("_:red[에너지 학습 도움이]_ 🏫")
-    st.header("😶주의! 이 창바드는 참고용으로 사용하세요!", divider='rainbow')
+    st.header("😶주의! 이 쳇봇은 참고용으로 사용하세요!", divider='rainbow')
     
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
@@ -41,7 +41,7 @@ def main():
         st.session_state.voice_input = ""
 
     if 'messages' not in st.session_state:
-        st.session_state['messages'] = [{"role": "assistant", "content": "에너지 학습에 대해 문자보세요!😊"}]
+        st.session_state['messages'] = [{"role": "assistant", "content": "에너지 학습에 대해 질문해 보세요!😊"}]
 
     with st.sidebar:
         folder_path = Path()
@@ -186,7 +186,7 @@ def save_conversation_as_txt(chat_history):
     for message in chat_history:
         role = "user" if isinstance(message, HumanMessage) else "assistant"
         content = message.content
-        conversation += f"연금: {role}\n내용: {content}\n\n"
+        conversation += f"유저: {role}\n내용: {content}\n\n"
     
     b64 = base64.b64encode(conversation.encode()).decode()
     href = f'<a href="data:file/txt;base64,{b64}" download="대화.txt">\ub300화 다운로드</a>'
