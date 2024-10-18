@@ -25,7 +25,7 @@ import tempfile
 def main():
     st.set_page_config(page_title="에너지", page_icon="🌻")
     st.image('energy.png')
-    st.title("_:red[에너지 학습 도움이]_ 🏫")
+    st.title("_:red[에너지 학습 도우미]_ 🏫")
     st.header("😶주의! 이 쳇봇은 참고용으로 사용하세요!", divider='rainbow')
     
     if "conversation" not in st.session_state:
@@ -58,7 +58,7 @@ def main():
             st.session_state.conversation = get_conversation_chain(vectorstore, openai_api_key, model_name)
             st.session_state.processComplete = True
 
-        audio_value = st.experimental_audio_input("음성 메시지를 녹음하세요.")
+        audio_value = st.experimental_audio_input("음성 메시지를 녹음하여 질문하세요😁.")
 
         if audio_value:
             with st.spinner("음성을 인식하는 중..."):
@@ -71,7 +71,7 @@ def main():
                             st.session_state.voice_input = recognizer.recognize_google(audio, language='ko-KR')
                     st.session_state.voice_input = st.session_state.voice_input.strip()  # 공백 제거 후 저장
                 except sr.UnknownValueError:
-                    st.warning("음성을 인식하지 못했습니다. 다시 시도하세요!")
+                    st.warning("음성을 인식하지 못했거나 모델을 불러오지 않았습니다. Process를 눌르고 다시 시도하세요!")
                 except sr.RequestError:
                     st.warning("서버와의 연결에 문제가 있습니다. 다시 시도하세요!")
                 except OSError:
