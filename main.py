@@ -26,7 +26,7 @@ def main():
     st.set_page_config(page_title="에너지", page_icon="🌻")
     st.image('energy.png')
     st.title("_:red[에너지 학습 도우미]_ 🏫")
-    st.header("😶주의! 이 쳇봇은 참고용으로 사용하세요!", divider='rainbow')
+    st.header("😶주의! 이 챗봇은 참고용으로 사용하세요!", divider='rainbow')
     
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
