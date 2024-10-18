@@ -1,8 +1,3 @@
-# To install langchain_huggingface, run the following command:
-# !pip install langchain-huggingface
-
-# To install langchain_openai, run the following command:
-# !pip install langchain-openai
 
 import streamlit as st
 from pathlib import Path
