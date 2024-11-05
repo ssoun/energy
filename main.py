@@ -36,7 +36,7 @@ def main():
     if "voice_input" not in st.session_state:  # 음성 입력 상태
         st.session_state.voice_input = ""
     if 'messages' not in st.session_state:  # 초기 메시지 설정
-        st.session_state['messages'] = [{"role": "assistant", "content": "에너지 학습에 대해 질문해 보세요!😊"}]
+        st.session_state['messages'] = [{"role": "assistant", "content": "😊"}]
 
     # 사이드바 구성
     with st.sidebar:
